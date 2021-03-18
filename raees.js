@@ -37,7 +37,7 @@ const dateFormat = require("dateformat");
 var table = require("table").table;
 const Discord = require("discord.js");
 const cmd = require("node-cmd");
-const prefix = "c!";
+const prefix = ",";
 const cooldown = new Set();
 const cdtime = 5;
 ///////////////////////////////////////////////////////////////////////////////
@@ -63,17 +63,17 @@ calli.on("message", async message => {
       .setImage(calliImage)
       .setThumbnail(message.member.user.displayAvatarURL({ dynamic: true }))
       .setDescription(`
-━────╮🛠╭────━
+━────╮👀╭────━
 **Info Command**
 \`${prefix}botinfo\` - \`${prefix}userinfo\`
 \`${prefix}serverinfo\` - \`${prefix}ping\`
-━────╮🛠╭────━
+━────╮🚸╭────━
 **Moderation Command**
 \`${prefix}lock\` - \`${prefix}unlock\` - \`${prefix}ban\` - \`${prefix}kick\`
-━────╮🛠╭────━
+━────╮🚫╭────━
 **Security Command**
 \`${prefix}show anti\` - \`${prefix}settings\`
-━────╮🛠╭────━
+━────╮☯️╭────━
 **Links**
 [Add Bot](https://discord.com/api/oauth2/authorize?client_id=${calli.user.id}&permissions=8&scope=bot) - [Support]()
       `);
@@ -89,7 +89,7 @@ calli.on("message", async message => {
       .setImage(calliImage)
       .setThumbnail(message.member.user.displayAvatarURL({ dynamic: true }))
       .setDescription(`
-━────╮🛠╭────━
+━────╮🔰╭────━
 **Security**
 \`${prefix}anti ban {number}\`
 \`${prefix}anti kick {number}\`
@@ -98,7 +98,7 @@ calli.on("message", async message => {
 \`${prefix}anti roleD {number}\`
 \`${prefix}anti roleC {number}\`
 \`${prefix}anti bot {on/off}\`
-━────╮🛠╭────━
+━────╮🔰╭────━
       `);
     message.channel.send(showanti);
   }
@@ -218,7 +218,7 @@ ${prefix}ban @metion 1w swearing
 });
 //////////////////////////////////////////////////////////////////////////////
 calli.on("message", message => {
-  var prefix = "c!";
+  var prefix = ",";
   if (message.author.kick) return;
   if (!message.content.startsWith(prefix)) return;
 
@@ -309,7 +309,7 @@ calli.on("message", msg => {
       .addField("Users", `**${calli.users.cache.size}**`, true)
       .addField("My Name", `**${calli.user.tag}**`, true)
       .addField("My ID", `**${calli.user.id}**`, true)
-      .addField("Owner Bot", `Calli#4420`, true);
+      .addField("Owner Bot", `MS × RAEES ⚡#0001`, true);
 
     msg.channel.send(embed);
   }
